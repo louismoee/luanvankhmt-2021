@@ -127,6 +127,12 @@ def index_predict(auth):
 
     return jsonify(res), res['status']
 
+@app.route('/', methods=['GET'])
+def index():
+    res = getresponse("SUCCESS")
+
+    return jsonify(res), res['status']
+
 # if __name__ == '__main__':
 
 #     load_model(weights_loaded)
